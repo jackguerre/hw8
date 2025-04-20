@@ -12,13 +12,14 @@ Matrix createMatrix(int rows, int cols){
     m.rows = rows;
     m.cols = cols;
     m.data = (int**)malloc(rows * sizeof(int*));
-    for (int i = 0; i < rows; ++i)
+    for (int i = 0; i < rows; i++){
         m.data[i] = (int*)calloc(cols, sizeof(int));
+    }
     return m;
 }
 
 void freeMatrix(Matrix* m){
-    for (int i = 0; i < m->rows; ++i){
+    for (int i = 0; i < m->rows; i++){
         free(m->data[i]);
     }
     free(m->data);
