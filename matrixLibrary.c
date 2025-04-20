@@ -82,23 +82,33 @@ int main(){
     Matrix C = createMatrix(2, 3);
 
     //Fill A
-    A.data[0][0] = 6; A.data[0][1] = 4;
-    A.data[1][0] = 8; A.data[1][1] = 3;
+    A.data[0][0] = 6; 
+    A.data[0][1] = 4;
+    A.data[1][0] = 8; 
+    A.data[1][1] = 3;
 
     //Fill B
-    B.data[0][0] = 1; B.data[0][1] = 2; B.data[0][2] = 3;
-    B.data[1][0] = 4; B.data[1][1] = 5; B.data[1][2] = 6;
+    B.data[0][0] = 1; 
+    B.data[0][1] = 2; 
+    B.data[0][2] = 3;
+    B.data[1][0] = 4; 
+    B.data[1][1] = 5; 
+    B.data[1][2] = 6;
 
     //Fill C
-    C.data[0][0] = 2; C.data[0][1] = 4; C.data[0][2] = 6;
-    C.data[1][0] = 1; C.data[1][1] = 3; C.data[1][2] = 5;
+    C.data[0][0] = 2; 
+    C.data[0][1] = 4; 
+    C.data[0][2] = 6;
+    C.data[1][0] = 1; 
+    C.data[1][1] = 3; 
+    C.data[1][2] = 5;
 
     Matrix B_scaled = scalarMultiply(B, 3);
     Matrix C_T = transpose(C);
     Matrix product = multiply(B_scaled, C_T);
     Matrix D = add(A, product);
 
-    printf("Matrix D:\n");
+    printf("Matrix D: ");
     printMatrix(D);
 
     // Free memory
